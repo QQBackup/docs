@@ -13,7 +13,7 @@ author = 'Young-Lord'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = []
+extensions = ['myst_parser', 'sphinx-markdown-tables']
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
@@ -25,3 +25,8 @@ language = 'zh_CN'
 
 html_theme = 'alabaster'
 html_static_path = ['_static']
+
+# -- Options for Markdown -------------------------------------------------
+# https://myst-parser.readthedocs.io/en/latest/syntax/optional.html
+
+myst_enable_extensions = ["dollarmath", "tasklist", "fieldlist", "html_image"]
